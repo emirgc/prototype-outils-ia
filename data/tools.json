@@ -1,0 +1,523 @@
+[
+  {
+    "id": "claude",
+    "name": "Claude",
+    "category": "Génératif généraliste",
+    "tagline": "Assistant conversationnel web fluide, utile pour cadrer une question, mais non recommandé comme moteur principal de recherche documentaire universitaire.",
+    "focus": [
+      "web",
+      "texte généré",
+      "interactions fortes"
+    ],
+    "bestFor": "Reformuler une question ou cadrer très vite un sujet avant de basculer vers un vrai outil de découverte documentaire.",
+    "caution": "Comme les autres IAg généralistes, il reste mal adapté à une recherche documentaire rigoureuse, car il est emboîté dans un système génératif.",
+    "defaultReason": "Peut aider à cadrer en langage naturel, mais pas servir de moteur principal de recherche documentaire.",
+    "url": "https://claude.ai/",
+    "accent": "#c75c44",
+    "corpus": "Pas de corpus : modèle de langue et RAG",
+    "synthesis": "Oui",
+    "studiesFound": "Variable",
+    "interaction": "Oui",
+    "ragScope": "Web",
+    "outputs": [
+      "Texte généré automatiquement"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Non recommandé"
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "category": "Génératif généraliste",
+    "tagline": "Assistant conversationnel web fluide, utile pour cadrer une question, mais non recommandé comme moteur principal de recherche documentaire universitaire.",
+    "focus": [
+      "web",
+      "texte généré",
+      "interactions fortes"
+    ],
+    "bestFor": "Cadrer rapidement une question en langage naturel si vous assumez qu'il ne remplace pas un moteur bibliographique.",
+    "caution": "Comme les autres IAg généralistes, il reste mal adapté à une recherche documentaire rigoureuse, car il est emboîté dans un système génératif.",
+    "defaultReason": "Peut accélérer le cadrage d’un sujet, mais pas conduire la recherche documentaire elle-même.",
+    "url": "https://chatgpt.com/",
+    "accent": "#2c8f78",
+    "corpus": "Pas de corpus : modèle de langue et RAG",
+    "synthesis": "Oui",
+    "studiesFound": "Variable",
+    "interaction": "Oui",
+    "ragScope": "Web",
+    "outputs": [
+      "Texte généré automatiquement"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Non recommandé"
+    ]
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini",
+    "category": "Génératif généraliste",
+    "tagline": "Assistant conversationnel web fluide, utile pour discuter d’un sujet, mais non recommandé comme moteur principal de recherche documentaire universitaire.",
+    "focus": [
+      "web",
+      "texte généré",
+      "interactions fortes"
+    ],
+    "bestFor": "Prendre un premier élan conversationnel sur un sujet avant une vraie recherche dans des corpus spécialisés.",
+    "caution": "Comme les autres IAg généralistes, il reste mal adapté à une recherche documentaire rigoureuse, car il est emboîté dans un système génératif.",
+    "defaultReason": "Confortable pour discuter d’un sujet, mais pas pour repérer et trier rigoureusement la littérature.",
+    "url": "https://gemini.google.com/",
+    "accent": "#4f7adf",
+    "corpus": "Pas de corpus : modèle de langue et RAG",
+    "synthesis": "Oui",
+    "studiesFound": "Variable",
+    "interaction": "Oui",
+    "ragScope": "Web",
+    "outputs": [
+      "Texte généré automatiquement"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Non recommandé"
+    ]
+  },
+  {
+    "id": "copilot",
+    "name": "Copilot",
+    "category": "Génératif généraliste",
+    "tagline": "Assistant conversationnel web fluide, utile pour un premier cadrage, mais non recommandé comme moteur principal de recherche documentaire universitaire.",
+    "focus": [
+      "web",
+      "texte généré",
+      "interactions fortes"
+    ],
+    "bestFor": "Obtenir un premier cadrage conversationnel si vous comptez ensuite vérifier dans un outil de recherche documentaire dédié.",
+    "caution": "Comme les autres IAg généralistes, il reste mal adapté à une recherche documentaire rigoureuse, car il est emboîté dans un système génératif.",
+    "defaultReason": "Peut rendre l’échange fluide, mais reste mal adapté à la recherche documentaire universitaire.",
+    "url": "https://copilot.microsoft.com/",
+    "accent": "#3a86c6",
+    "corpus": "Pas de corpus : modèle de langue et RAG",
+    "synthesis": "Oui",
+    "studiesFound": "Variable",
+    "interaction": "Oui",
+    "ragScope": "Web",
+    "outputs": [
+      "Texte généré automatiquement"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Non recommandé"
+    ]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "category": "Génératif généraliste",
+    "tagline": "Answer engine web pratique pour démarrer vite, mais non recommandé comme moteur principal de recherche universitaire.",
+    "focus": [
+      "web",
+      "texte généré",
+      "interactions fortes"
+    ],
+    "bestFor": "Faire un cadrage initial rapide à partir du web avant de passer à une recherche bibliographique plus propre.",
+    "caution": "Malgré son confort d’usage, il reste plus proche d’un assistant généraliste que d’un outil de découverte scientifique rigoureux.",
+    "defaultReason": "Peut servir à démarrer vite, mais pas comme outil principal de découverte scientifique.",
+    "url": "https://www.perplexity.ai/",
+    "accent": "#1d6fc0",
+    "corpus": "Pas de corpus : modèle de langue et RAG",
+    "synthesis": "Oui",
+    "studiesFound": "Variable",
+    "interaction": "Oui",
+    "ragScope": "Web",
+    "outputs": [
+      "Texte généré automatiquement"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Non recommandé"
+    ]
+  },
+  {
+    "id": "ai2_openscholar",
+    "name": "AI2 OpenScholar",
+    "category": "Génératif généraliste",
+    "tagline": "Outil lié à Allen AI, mais qui reste plus proche d’un assistant généraliste que d’un moteur documentaire rigoureux.",
+    "focus": [
+      "web",
+      "texte généré",
+      "interactions fortes"
+    ],
+    "bestFor": "Tester un cadrage conversationnel de départ, pas conduire à lui seul la recherche documentaire.",
+    "caution": "Malgré son habillage académique, il reste plus adapté au cadrage conversationnel qu’à une recherche documentaire universitaire rigoureuse.",
+    "defaultReason": "Son habillage académique peut attirer, mais il ne remplace pas un moteur principal de découverte.",
+    "url": "https://openscilm.allen.ai/",
+    "accent": "#6b5bd2",
+    "corpus": "Pas de corpus : modèle de langue et RAG",
+    "synthesis": "Oui",
+    "studiesFound": "Variable",
+    "interaction": "Oui",
+    "ragScope": "Web",
+    "outputs": [
+      "Texte généré automatiquement"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Non recommandé"
+    ]
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "category": "Métadonnées + synthèse",
+    "tagline": "Outil de découverte bibliographique sur métadonnées avec mini-synthèse, extraction d'information et filtres.",
+    "focus": [
+      "Semantic Scholar + PubMed",
+      "Mini-synthèse (4)",
+      "40+ études"
+    ],
+    "bestFor": "Explorer ou compléter une recherche si vous voulez extraire rapidement des informations d'études et filtrer un corpus assez large.",
+    "caution": "Inclut des revues douteuses et emploie le terme « revue systématique » pour un service non transparent et non reproductible.",
+    "defaultReason": "Monte quand il faut à la fois un lot de documents, une mini-synthèse et de l'extraction structurée.",
+    "url": "https://elicit.com/",
+    "accent": "#0f7f75",
+    "corpus": "Semantic Scholar (PubMed + arXiv + SSRN + IEEE + ...) + RePEc",
+    "synthesis": "Mini (4)",
+    "studiesFound": "40+",
+    "interaction": "Oui",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "scispace",
+    "name": "SciSpace",
+    "category": "Métadonnées + synthèse",
+    "tagline": "Moteur de découverte sur métadonnées avec mini-synthèse, extraction d'information, filtres et nombreux gadgets.",
+    "focus": [
+      "Semantic Scholar + OpenAlex",
+      "Mini-synthèse (5)",
+      "40+ études"
+    ],
+    "bestFor": "Explorer ou compléter un sujet si vous voulez un compromis entre synthèse rapide, filtres et fonctions additionnelles.",
+    "caution": "Inclut des revues douteuses. Les gadgets sont nombreux, mais ne remplacent pas un vrai tri critique des résultats.",
+    "defaultReason": "Remonte quand vous cherchez une mini-synthèse utile avec extraction d'information et filtres.",
+    "url": "https://scispace.com/",
+    "accent": "#1f8a70",
+    "corpus": "Semantic Scholar + OpenAlex + Google Scholar",
+    "synthesis": "Mini (5)",
+    "studiesFound": "40+",
+    "interaction": "Oui",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus.app",
+    "category": "Métadonnées + synthèse",
+    "tagline": "Moteur de découverte avec mini-synthèse, filtres et tri, mais avec un indicateur de consensus potentiellement trompeur.",
+    "focus": [
+      "Semantic Scholar + OpenAlex",
+      "Mini-synthèse (6+)",
+      "20+ études"
+    ],
+    "bestFor": "Explorer ou compléter une recherche à partir d'une question bien formulée quand une mini-synthèse suffit.",
+    "caution": "Inclut des revues douteuses et un « consensus meter » potentiellement trompeur, trop substitutif au jugement du chercheur.",
+    "defaultReason": "Bon candidat si vous voulez un compromis entre mini-synthèse et liste de documents, sans viser un processus très détaillé.",
+    "url": "https://consensus.app/",
+    "accent": "#d65c31",
+    "corpus": "Semantic Scholar + OpenAlex + autres",
+    "synthesis": "Mini (6+)",
+    "studiesFound": "20+",
+    "interaction": "Oui",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "evidencehunt",
+    "name": "EvidenceHunt",
+    "category": "Biomédical",
+    "tagline": "Outil centré sur PubMed avec beaucoup d’études repérées et des filtres très pratiques, mais globalement moins recommandé.",
+    "focus": [
+      "PubMed",
+      "Mini-synthèse (8)",
+      "300+ études"
+    ],
+    "bestFor": "Balayer vite un sujet biomédical si vous voulez surtout filtrer par dates, type d'études, facteur d'impact et taille d'échantillon.",
+    "caution": "Inclut des revues douteuses et des articles rétractés, malgré un très bon volume de résultats.",
+    "defaultReason": "Peut monter si le besoin principal est de ratisser large en santé avec des filtres avancés.",
+    "url": "https://evidencehunt.com/",
+    "accent": "#8a4f2a",
+    "corpus": "PubMed",
+    "synthesis": "Mini (8)",
+    "studiesFound": "300+",
+    "interaction": "Peu",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Peu recommandé"
+    ]
+  },
+  {
+    "id": "google_scholar_labs",
+    "name": "Google Scholar Labs",
+    "category": "Texte intégral",
+    "tagline": "Recherche dans le texte intégral avec peu d'interaction et sans vraie synthèse, mais utile pour compléter une recherche documentaire.",
+    "focus": [
+      "Google Scholar",
+      "Texte intégral",
+      "10-30 études"
+    ],
+    "bestFor": "Explorer ou compléter si vous voulez chercher dans le texte intégral plutôt que rester limité aux titres et résumés.",
+    "caution": "Inclut des revues douteuses et ne fournit pas de vraie synthèse. Il reste surtout utile pour constituer une liste de documents.",
+    "defaultReason": "Remonte quand la priorité est la recherche en texte intégral plus que la production d'un rapport.",
+    "url": "https://scholar.google.com/scholar_labs/",
+    "accent": "#2d6ad9",
+    "corpus": "Google Scholar",
+    "synthesis": "Non",
+    "studiesFound": "10-30",
+    "interaction": "Peu",
+    "ragScope": "Texte intégral",
+    "outputs": [
+      "Liste de documents"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "undermind",
+    "name": "Undermind",
+    "category": "Métadonnées + processus détaillé",
+    "tagline": "Outil de découverte sur métadonnées qui combine rapport, processus détaillé, alertes et relativement peu de revues douteuses.",
+    "focus": [
+      "Semantic Scholar + OSF",
+      "Synthèse oui (15)",
+      "70+ études"
+    ],
+    "bestFor": "Explorer ou compléter une recherche si vous voulez beaucoup de résultats, un processus explicite et des alertes sur les sujets lancés.",
+    "caution": "Travaille seulement sur les métadonnées, pas sur le texte intégral des articles.",
+    "defaultReason": "Candidat fort si vous privilégiez la traçabilité du processus et une meilleure hygiène des sources.",
+    "url": "https://app.undermind.ai/",
+    "accent": "#8d3f72",
+    "corpus": "Semantic Scholar + OSF",
+    "synthesis": "Oui (15)",
+    "studiesFound": "70+",
+    "interaction": "Au début",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Peu",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "asta",
+    "name": "Asta",
+    "category": "Métadonnées + rapport",
+    "tagline": "Outil de découverte qui explicite ses limites et vérifie si le sujet apparaît dans les études repérées.",
+    "focus": [
+      "Semantic Scholar",
+      "Synthèse oui (15)",
+      "40+ études"
+    ],
+    "bestFor": "Explorer ou compléter si vous voulez un rapport de synthèse et un outil qui dit clairement quand il ne trouve pas ou ne retrace pas une information.",
+    "caution": "Inclut des revues douteuses et des articles rétractés. L’exportation BibTeX reste en outre de faible qualité.",
+    "defaultReason": "Monte quand la transparence sur les limites compte autant que la production d'un rapport.",
+    "url": "https://asta.allen.ai/",
+    "accent": "#de8b2c",
+    "corpus": "Semantic Scholar",
+    "synthesis": "Oui (15)",
+    "studiesFound": "40+",
+    "interaction": "Peu",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "platform",
+    "name": "Platform (Edison Scientific)",
+    "category": "Métadonnées + processus détaillé",
+    "tagline": "Outil de découverte sur métadonnées qui mise sur un processus détaillé et un duo liste de documents plus rapport.",
+    "focus": [
+      "Semantic Scholar + Crossref",
+      "Synthèse oui (8)",
+      "26 études"
+    ],
+    "bestFor": "Explorer ou compléter si vous voulez surtout comprendre le processus suivi par l'outil et garder un couple liste plus rapport.",
+    "caution": "Inclut des revues douteuses et ne met pas en avant de garde-fou qualité particulier.",
+    "defaultReason": "Remonte si la lisibilité du processus compte plus qu'un très grand volume d'études.",
+    "url": "https://platform.edisonscientific.com/",
+    "accent": "#7f5aa2",
+    "corpus": "Semantic Scholar + Crossref",
+    "synthesis": "Oui (8)",
+    "studiesFound": "26",
+    "interaction": "Peu",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "keenious",
+    "name": "Keenious",
+    "category": "Exploration thématique",
+    "tagline": "Outil centré sur OpenAlex pour faire émerger des sujets, mais peu recommandé comme moteur principal.",
+    "focus": [
+      "OpenAlex",
+      "30+ études",
+      "extraction de sujets"
+    ],
+    "bestFor": "Faire émerger des sujets ou des pistes connexes plutôt que produire une vraie synthèse documentaire solide.",
+    "caution": "Reste peu recommandé comme moteur principal et sert surtout à faire émerger des sujets, avec une valeur de synthèse limitée.",
+    "defaultReason": "Intéresse surtout si l'extraction de sujets compte plus que la qualité du rapport final.",
+    "url": "https://keenious.com/",
+    "accent": "#c04e74",
+    "corpus": "OpenAlex",
+    "synthesis": "Non",
+    "studiesFound": "30+",
+    "interaction": "Peu",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Oui",
+    "recommendedUses": [
+      "Peu recommandé"
+    ]
+  },
+  {
+    "id": "liner",
+    "name": "Liner",
+    "category": "Métadonnées + processus détaillé",
+    "tagline": "Outil de découverte sur métadonnées avec rapport, processus détaillé et relativement peu de revues douteuses.",
+    "focus": [
+      "Semantic Scholar",
+      "Synthèse oui (10+)",
+      "15+ études"
+    ],
+    "bestFor": "Explorer ou compléter si vous voulez un processus détaillé sans vous éloigner d'un corpus relativement plus propre.",
+    "caution": "La fonction « citation recommander » pose une question éthique.",
+    "defaultReason": "Peut monter quand vous voulez un rapport et un processus détaillé avec un peu moins de revues douteuses.",
+    "url": "https://getliner.com/",
+    "accent": "#0e8b8d",
+    "corpus": "Semantic Scholar",
+    "synthesis": "Oui (10+)",
+    "studiesFound": "15+",
+    "interaction": "Peu",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents",
+      "Rapport de synthèse"
+    ],
+    "doubtfulReviews": "Peu",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  },
+  {
+    "id": "jstor_ai",
+    "name": "JSTOR AI",
+    "category": "Texte intégral",
+    "tagline": "Outil de complément qui vérifie la pertinence dans le texte intégral, un document à la fois, avec une grande capacité de rappel.",
+    "focus": [
+      "JSTOR",
+      "Texte intégral",
+      "1000+ études"
+    ],
+    "bestFor": "Compléter une recherche si vous voulez vérifier la pertinence de résultats directement dans le texte intégral de chaque document sélectionné.",
+    "caution": "Produit parfois du bruit et ne fournit pas de vraie synthèse. Il reste pensé pour compléter, pas pour tout faire.",
+    "defaultReason": "Très bon signal si vous voulez ratisser large puis vérifier finement dans le texte intégral.",
+    "url": "https://www.jstor.org/",
+    "accent": "#3b5b8a",
+    "corpus": "JSTOR",
+    "synthesis": "Non",
+    "studiesFound": "1000+",
+    "interaction": "Non précisée",
+    "ragScope": "Sur le texte intégral, un document à la fois",
+    "outputs": [
+      "Liste de documents"
+    ],
+    "doubtfulReviews": "Non",
+    "recommendedUses": [
+      "Compléter"
+    ]
+  },
+  {
+    "id": "scifinder_ai",
+    "name": "Scifinder AI",
+    "category": "Disciplinaire",
+    "tagline": "Outil sur corpus Scifinder, pertinent surtout si votre terrain disciplinaire correspond à cette base spécialisée.",
+    "focus": [
+      "Scifinder",
+      "10+ études",
+      "métadonnées"
+    ],
+    "bestFor": "Explorer ou compléter une recherche lorsque le corpus Scifinder colle vraiment à votre domaine de travail.",
+    "caution": "Dans sa version gratuite, aucun rapport de synthèse n’apparaît. L’outil est surtout pertinent si son corpus spécialisé correspond à votre sujet.",
+    "defaultReason": "Monte surtout sur des besoins disciplinaires très ciblés, pas comme choix universel tous domaines confondus.",
+    "url": "https://www.cas.org/",
+    "accent": "#4056b0",
+    "corpus": "Scifinder",
+    "synthesis": "Non",
+    "studiesFound": "10+",
+    "interaction": "Oui",
+    "ragScope": "Métadonnées",
+    "outputs": [
+      "Liste de documents"
+    ],
+    "doubtfulReviews": "Non",
+    "recommendedUses": [
+      "Explorer",
+      "Compléter"
+    ]
+  }
+]

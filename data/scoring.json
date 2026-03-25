@@ -1,0 +1,1605 @@
+{
+  "rules": [
+    {
+      "questionId": "research_stage",
+      "optionId": "explore_unknown",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 4,
+          "reason": "Il convient bien pour explorer un sujet encore peu maîtrisé."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 4,
+          "reason": "SciSpace fait partie des outils recommandés pour l'exploration initiale d'un sujet."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 4,
+          "reason": "Consensus.app est classé parmi les outils utiles pour explorer avant d'approfondir."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 4,
+          "reason": "Google Scholar Labs est recommandé pour explorer et ouvrir un sujet via la recherche plein texte."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 4,
+          "reason": "Undermind monte quand l'objectif est d'explorer avec un processus détaillé."
+        },
+        {
+          "toolId": "asta",
+          "delta": 4,
+          "reason": "Asta est recommandé pour explorer tout en explicitant ses limites."
+        },
+        {
+          "toolId": "platform",
+          "delta": 4,
+          "reason": "Platform convient aussi à l'exploration d'un sujet."
+        },
+        {
+          "toolId": "liner",
+          "delta": 4,
+          "reason": "Liner reste dans la zone des outils recommandés pour l'exploration."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 3,
+          "reason": "Scifinder AI est recommandé pour explorer quand son corpus colle au domaine."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -2,
+          "reason": "JSTOR AI est plutôt présenté comme outil de complément que d'exploration initiale."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -1,
+          "reason": "EvidenceHunt reste secondaire malgré son volume de résultats."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -2,
+          "reason": "Keenious est peu recommandé comme moteur principal d'exploration."
+        },
+        {
+          "toolId": "claude",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "gemini",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "copilot",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": -7,
+          "reason": "AI2 OpenScholar reste plus adapté au cadrage conversationnel qu'à la recherche documentaire principale."
+        }
+      ]
+    },
+    {
+      "questionId": "research_stage",
+      "optionId": "complement_existing",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 4,
+          "reason": "Elicit est aussi recommandé pour compléter une recherche déjà commencée."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 4,
+          "reason": "SciSpace reste bien placé pour compléter un corpus existant."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 4,
+          "reason": "Consensus.app est recommandé pour compléter une recherche documentaire."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 4,
+          "reason": "Google Scholar Labs garde de la valeur pour compléter avec du plein texte."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 4,
+          "reason": "Undermind peut compléter utilement une recherche déjà en cours."
+        },
+        {
+          "toolId": "asta",
+          "delta": 4,
+          "reason": "Asta est recommandé aussi pour compléter une recherche déjà faite."
+        },
+        {
+          "toolId": "platform",
+          "delta": 4,
+          "reason": "Platform fait partie des outils recommandés en usage de complément."
+        },
+        {
+          "toolId": "liner",
+          "delta": 4,
+          "reason": "Liner est également rangé dans les outils utiles pour compléter."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": 5,
+          "reason": "JSTOR AI est explicitement recommandé comme outil de complément."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 4,
+          "reason": "Scifinder AI est recommandé pour compléter quand le corpus convient."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": 1,
+          "reason": "EvidenceHunt peut aider à compléter si l'on accepte sa vigilance documentaire plus faible."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -1,
+          "reason": "Keenious reste peu recommandé comme moteur principal, même en complément."
+        },
+        {
+          "toolId": "claude",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "gemini",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "copilot",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": -7,
+          "reason": "AI2 OpenScholar reste plus adapté au cadrage conversationnel qu'à la recherche documentaire principale."
+        }
+      ]
+    },
+    {
+      "questionId": "research_stage",
+      "optionId": "both_stages",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 5,
+          "reason": "Elicit couvre bien les deux usages principaux : explorer puis compléter."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 5,
+          "reason": "SciSpace reste polyvalent pour passer de l'exploration au complément."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 5,
+          "reason": "Consensus.app peut servir dans les deux temps, avec mini-synthèse et liste de documents."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 4,
+          "reason": "Google Scholar Labs aide à la fois à ouvrir le sujet et à compléter via le plein texte."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 4,
+          "reason": "Undermind reste bien placé pour un usage hybride exploration + complément."
+        },
+        {
+          "toolId": "asta",
+          "delta": 4,
+          "reason": "Asta garde de la valeur sur les deux étapes grâce à son rapport et son explicitation des limites."
+        },
+        {
+          "toolId": "platform",
+          "delta": 4,
+          "reason": "Platform fonctionne quand vous voulez garder un outil valable sur les deux phases."
+        },
+        {
+          "toolId": "liner",
+          "delta": 4,
+          "reason": "Liner tient correctement la bascule entre exploration et complément."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": 3,
+          "reason": "JSTOR AI reste surtout un outil de complément, mais peut encore servir dans un flux mixte."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 4,
+          "reason": "Scifinder AI convient sur les deux usages si le corpus disciplinaire est pertinent."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -1,
+          "reason": "Keenious reste en retrait comme moteur principal, même dans un usage hybride."
+        },
+        {
+          "toolId": "claude",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "gemini",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "copilot",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": -7,
+          "reason": "Cet outil généraliste reste mal adapté à la recherche documentaire."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": -7,
+          "reason": "AI2 OpenScholar reste plus adapté au cadrage conversationnel qu'à la recherche documentaire principale."
+        }
+      ]
+    },
+    {
+      "questionId": "discipline_focus",
+      "optionId": "multidisciplinary",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 3,
+          "reason": "Elicit s'appuie sur un corpus assez large pour des sujets transversaux."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 4,
+          "reason": "SciSpace combine plusieurs bases utiles dans des recherches généralistes ou transversales."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 4,
+          "reason": "Consensus.app repose sur plusieurs sources adaptées à des sujets multidisciplinaires."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 3,
+          "reason": "Google Scholar Labs garde une bonne largeur disciplinaire."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 4,
+          "reason": "Undermind monte sur des besoins transversaux grâce à son couple Semantic Scholar plus OSF."
+        },
+        {
+          "toolId": "asta",
+          "delta": 3,
+          "reason": "Asta reste adapté à une recherche large tant que le sujet vit bien dans Semantic Scholar."
+        },
+        {
+          "toolId": "platform",
+          "delta": 4,
+          "reason": "Platform tire parti d'un couple Semantic Scholar plus Crossref utile hors domaines très nichés."
+        },
+        {
+          "toolId": "keenious",
+          "delta": 2,
+          "reason": "Keenious peut aider à faire émerger des sujets dans un paysage très large."
+        },
+        {
+          "toolId": "liner",
+          "delta": 3,
+          "reason": "Liner reste pertinent sur des besoins généralistes portés par Semantic Scholar."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": 3,
+          "reason": "JSTOR AI peut aussi servir sur des sujets larges, surtout côté SHS."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -1,
+          "reason": "EvidenceHunt est beaucoup plus centré sur le biomédical que sur un terrain multidisciplinaire."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -2,
+          "reason": "Scifinder AI remonte moins si le besoin n'est pas vraiment disciplinaire."
+        }
+      ]
+    },
+    {
+      "questionId": "discipline_focus",
+      "optionId": "biomed_health",
+      "effects": [
+        {
+          "toolId": "evidencehunt",
+          "delta": 6,
+          "reason": "EvidenceHunt s'appuie directement sur PubMed, ce qui colle très bien à un terrain biomédical."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 4,
+          "reason": "Elicit garde une vraie force en santé grâce à son ancrage PubMed dans le corpus."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 3,
+          "reason": "Consensus.app reste bien placé pour des questions biomédicales appuyées sur la littérature."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 2,
+          "reason": "SciSpace peut encore bien couvrir la santé via son corpus large."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 2,
+          "reason": "Google Scholar Labs peut compléter utilement un besoin biomédical par le plein texte."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 2,
+          "reason": "Undermind reste utile si vous privilégiez processus et volume sur un sujet de santé."
+        },
+        {
+          "toolId": "asta",
+          "delta": 2,
+          "reason": "Asta peut aider en biomédical tant que vous acceptez ses limites documentaires."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -2,
+          "reason": "Scifinder AI colle moins à un besoin biomédical que les outils basés sur PubMed ou Semantic Scholar."
+        }
+      ]
+    },
+    {
+      "questionId": "discipline_focus",
+      "optionId": "humanities_jstor",
+      "effects": [
+        {
+          "toolId": "jstor_ai",
+          "delta": 7,
+          "reason": "JSTOR AI devient naturellement très pertinent quand le terrain ressemble à JSTOR et au plein texte SHS."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 2,
+          "reason": "Google Scholar Labs peut compléter un besoin SHS grâce à la recherche dans le texte intégral."
+        },
+        {
+          "toolId": "platform",
+          "delta": 1,
+          "reason": "Platform peut encore servir en appui sur des corpus plus larges."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -2,
+          "reason": "EvidenceHunt est trop centré sur PubMed pour ce type de terrain."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -2,
+          "reason": "Scifinder AI n'est pas pensé pour un usage type JSTOR ou SHS."
+        }
+      ]
+    },
+    {
+      "questionId": "discipline_focus",
+      "optionId": "chemistry",
+      "effects": [
+        {
+          "toolId": "scifinder_ai",
+          "delta": 7,
+          "reason": "Scifinder AI monte fortement quand un corpus très spécialisé devient central."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 1,
+          "reason": "Google Scholar Labs peut encore servir en appoint sur du texte intégral hors corpus spécialisé."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -3,
+          "reason": "EvidenceHunt est trop médical pour une logique de corpus très spécialisé type chimie."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -2,
+          "reason": "JSTOR AI colle moins à un besoin disciplinaire aussi technique."
+        }
+      ]
+    },
+    {
+      "questionId": "desired_output",
+      "optionId": "document_list",
+      "effects": [
+        {
+          "toolId": "evidencehunt",
+          "delta": 4,
+          "reason": "EvidenceHunt est surtout fort comme liste de documents appuyée par des filtres."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 4,
+          "reason": "Google Scholar Labs est plus utile pour repérer des documents que pour produire une synthèse."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": 4,
+          "reason": "JSTOR AI reste un outil de liste et de vérification dans le texte intégral."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 4,
+          "reason": "Scifinder AI sert surtout à produire une liste de documents dans sa version gratuite."
+        },
+        {
+          "toolId": "keenious",
+          "delta": 3,
+          "reason": "Keenious est surtout crédible quand on lui demande une liste ou des pistes, pas une vraie synthèse."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 2,
+          "reason": "Elicit peut aussi produire une bonne liste de documents exploitable."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 2,
+          "reason": "SciSpace garde de la valeur même si la liste de documents est votre sortie principale."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 2,
+          "reason": "Consensus.app fournit aussi une liste de documents pertinente."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 2,
+          "reason": "Undermind reste utile si vous voulez surtout repérer des documents."
+        },
+        {
+          "toolId": "asta",
+          "delta": 2,
+          "reason": "Asta peut rester utile même si la liste de documents prime sur le rapport."
+        },
+        {
+          "toolId": "platform",
+          "delta": 2,
+          "reason": "Platform garde un intérêt si votre sortie principale reste la liste."
+        },
+        {
+          "toolId": "liner",
+          "delta": 2,
+          "reason": "Liner continue à bien fonctionner si vous voulez surtout des documents."
+        },
+        {
+          "toolId": "claude",
+          "delta": -3,
+          "reason": "Les généralistes ne sont pas de vrais générateurs de listes bibliographiques fiables."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": -3,
+          "reason": "Les généralistes ne sont pas de vrais générateurs de listes bibliographiques fiables."
+        },
+        {
+          "toolId": "gemini",
+          "delta": -3,
+          "reason": "Les généralistes ne sont pas de vrais générateurs de listes bibliographiques fiables."
+        },
+        {
+          "toolId": "copilot",
+          "delta": -3,
+          "reason": "Les généralistes ne sont pas de vrais générateurs de listes bibliographiques fiables."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": -3,
+          "reason": "Les généralistes ne sont pas de vrais générateurs de listes bibliographiques fiables."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": -3,
+          "reason": "AI2 OpenScholar est regroupé avec les généralistes, pas avec les vrais moteurs de listes bibliographiques."
+        }
+      ]
+    },
+    {
+      "questionId": "desired_output",
+      "optionId": "synthesis_report",
+      "effects": [
+        {
+          "toolId": "undermind",
+          "delta": 5,
+          "reason": "Undermind prend de la valeur si un rapport de synthèse est attendu avec un vrai processus."
+        },
+        {
+          "toolId": "asta",
+          "delta": 5,
+          "reason": "Asta monte quand le rapport de synthèse devient la sortie la plus utile."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 4,
+          "reason": "Elicit produit des mini-synthèses efficaces sur un corpus large."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 4,
+          "reason": "SciSpace reste bien adapté si vous attendez surtout une synthèse."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 4,
+          "reason": "Consensus.app remonte naturellement quand la mini-synthèse compte beaucoup."
+        },
+        {
+          "toolId": "platform",
+          "delta": 4,
+          "reason": "Platform tient bien un besoin de rapport de synthèse."
+        },
+        {
+          "toolId": "liner",
+          "delta": 4,
+          "reason": "Liner reste pertinent si vous voulez surtout un rapport et un processus détaillé."
+        },
+        {
+          "toolId": "claude",
+          "delta": 3,
+          "reason": "Les généralistes savent produire du texte, mais restent mal adaptés à la recherche documentaire."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": 3,
+          "reason": "Les généralistes savent produire du texte, mais restent mal adaptés à la recherche documentaire."
+        },
+        {
+          "toolId": "gemini",
+          "delta": 3,
+          "reason": "Les généralistes savent produire du texte, mais restent mal adaptés à la recherche documentaire."
+        },
+        {
+          "toolId": "copilot",
+          "delta": 3,
+          "reason": "Les généralistes savent produire du texte, mais restent mal adaptés à la recherche documentaire."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": 3,
+          "reason": "Les généralistes savent produire du texte, mais restent mal adaptés à la recherche documentaire."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": 3,
+          "reason": "AI2 OpenScholar peut produire du texte, tout en restant du côté généraliste."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -2,
+          "reason": "EvidenceHunt reste surtout fort pour la liste filtrée, pas pour une synthèse de confiance."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": -4,
+          "reason": "Google Scholar Labs n'est pas un vrai outil de synthèse."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -4,
+          "reason": "JSTOR AI reste pensé comme outil de vérification documentaire plus que de synthèse."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -3,
+          "reason": "Scifinder AI n'offre pas de vrai rapport de synthèse dans sa version gratuite."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -3,
+          "reason": "Keenious ne se distingue pas par la qualité de sa synthèse finale."
+        }
+      ]
+    },
+    {
+      "questionId": "desired_output",
+      "optionId": "both_outputs",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 5,
+          "reason": "Elicit combine bien liste de documents et rapport de synthèse."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 5,
+          "reason": "SciSpace tient bien le duo liste + synthèse."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 5,
+          "reason": "Consensus.app combine justement liste de documents et mini-synthèse."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 5,
+          "reason": "Undermind monte fortement si vous voulez conserver ensemble documents et rapport."
+        },
+        {
+          "toolId": "asta",
+          "delta": 5,
+          "reason": "Asta colle bien à un besoin de liste + rapport avec explicitation des limites."
+        },
+        {
+          "toolId": "platform",
+          "delta": 5,
+          "reason": "Platform est explicitement positionné sur le couple liste + rapport."
+        },
+        {
+          "toolId": "liner",
+          "delta": 5,
+          "reason": "Liner reste pertinent si vous voulez les deux sorties ensemble."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": -2,
+          "reason": "Google Scholar Labs ne combine pas vraiment liste et vrai rapport."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -2,
+          "reason": "JSTOR AI est plus limité à la liste et à la vérification, un document à la fois."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -2,
+          "reason": "Scifinder AI ne couvre pas vraiment le volet rapport dans sa version gratuite."
+        },
+        {
+          "toolId": "claude",
+          "delta": -1,
+          "reason": "Les généralistes produisent du texte, mais pas le couple liste bibliographique plus rapport documenté attendu ici."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": -1,
+          "reason": "Les généralistes produisent du texte, mais pas le couple liste bibliographique plus rapport documenté attendu ici."
+        },
+        {
+          "toolId": "gemini",
+          "delta": -1,
+          "reason": "Les généralistes produisent du texte, mais pas le couple liste bibliographique plus rapport documenté attendu ici."
+        },
+        {
+          "toolId": "copilot",
+          "delta": -1,
+          "reason": "Les généralistes produisent du texte, mais pas le couple liste bibliographique plus rapport documenté attendu ici."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": -1,
+          "reason": "Les généralistes produisent du texte, mais pas le couple liste bibliographique plus rapport documenté attendu ici."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": -1,
+          "reason": "AI2 OpenScholar reste rangé du côté généraliste, pas du côté liste + rapport documenté."
+        }
+      ]
+    },
+    {
+      "questionId": "desired_output",
+      "optionId": "generated_text",
+      "effects": [
+        {
+          "toolId": "claude",
+          "delta": 6,
+          "reason": "Claude remonte si la priorité devient la rédaction automatique et le dialogue."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": 6,
+          "reason": "ChatGPT remonte si la priorité devient la rédaction automatique et le dialogue."
+        },
+        {
+          "toolId": "gemini",
+          "delta": 6,
+          "reason": "Gemini remonte si la priorité devient la rédaction automatique et le dialogue."
+        },
+        {
+          "toolId": "copilot",
+          "delta": 6,
+          "reason": "Copilot remonte si la priorité devient la rédaction automatique et le dialogue."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": 6,
+          "reason": "Perplexity remonte si la priorité devient un texte généré rapidement à partir du web."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": 6,
+          "reason": "AI2 OpenScholar remonte si vous privilégiez avant tout le texte généré."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": -3,
+          "reason": "Google Scholar Labs n'est pas conçu comme rédacteur automatique."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -3,
+          "reason": "JSTOR AI sert plus à vérifier des documents qu'à rédiger un texte fluide."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -3,
+          "reason": "Scifinder AI n'est pas un outil de rédaction automatique."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -2,
+          "reason": "EvidenceHunt vaut surtout pour le repérage et le filtrage, pas pour écrire à votre place."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -2,
+          "reason": "Keenious n'est pas un moteur de rédaction automatique."
+        }
+      ]
+    },
+    {
+      "questionId": "retrieval_basis",
+      "optionId": "metadata_only",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 4,
+          "reason": "Elicit travaille principalement sur les métadonnées."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 4,
+          "reason": "SciSpace fait lui aussi l'essentiel du travail sur les métadonnées."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 4,
+          "reason": "Consensus.app raisonne surtout sur titres, résumés et autres métadonnées."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": 4,
+          "reason": "EvidenceHunt opère principalement sur les métadonnées PubMed."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 4,
+          "reason": "Undermind est limité aux métadonnées."
+        },
+        {
+          "toolId": "asta",
+          "delta": 4,
+          "reason": "Asta travaille surtout sur les métadonnées des études repérées."
+        },
+        {
+          "toolId": "platform",
+          "delta": 4,
+          "reason": "Platform est lui aussi ancré sur les métadonnées."
+        },
+        {
+          "toolId": "keenious",
+          "delta": 4,
+          "reason": "Keenious repose sur les métadonnées OpenAlex."
+        },
+        {
+          "toolId": "liner",
+          "delta": 4,
+          "reason": "Liner travaille surtout à partir des métadonnées du corpus."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 4,
+          "reason": "Scifinder AI est également positionné sur les métadonnées."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": -3,
+          "reason": "Google Scholar Labs se distingue surtout par le texte intégral, pas par un simple usage métadonnées."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -3,
+          "reason": "JSTOR AI vaut surtout si vous voulez aller dans le texte intégral."
+        }
+      ]
+    },
+    {
+      "questionId": "retrieval_basis",
+      "optionId": "full_text",
+      "effects": [
+        {
+          "toolId": "jstor_ai",
+          "delta": 6,
+          "reason": "JSTOR AI monte fortement si vous voulez vérifier la pertinence dans le texte intégral."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 5,
+          "reason": "Google Scholar Labs est un signal fort pour la recherche plein texte."
+        },
+        {
+          "toolId": "elicit",
+          "delta": -2,
+          "reason": "Elicit travaille d'abord sur les métadonnées, pas sur le texte intégral."
+        },
+        {
+          "toolId": "scispace",
+          "delta": -2,
+          "reason": "SciSpace repose surtout sur les métadonnées."
+        },
+        {
+          "toolId": "consensus",
+          "delta": -2,
+          "reason": "Consensus.app n'est pas privilégié si le texte intégral est le critère principal."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -2,
+          "reason": "EvidenceHunt reste ancré sur les métadonnées PubMed."
+        },
+        {
+          "toolId": "undermind",
+          "delta": -2,
+          "reason": "Undermind est limité aux métadonnées."
+        },
+        {
+          "toolId": "asta",
+          "delta": -2,
+          "reason": "Asta ne se distingue pas ici par une vraie recherche plein texte."
+        },
+        {
+          "toolId": "platform",
+          "delta": -2,
+          "reason": "Platform est davantage orienté métadonnées que texte intégral."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -2,
+          "reason": "Keenious ne se distingue pas par un travail en texte intégral."
+        },
+        {
+          "toolId": "liner",
+          "delta": -2,
+          "reason": "Liner reste dans une logique de recherche sur métadonnées."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -2,
+          "reason": "Scifinder AI n'est pas ici le meilleur choix pour une exigence de plein texte."
+        }
+      ]
+    },
+    {
+      "questionId": "retrieval_basis",
+      "optionId": "web_rag",
+      "effects": [
+        {
+          "toolId": "claude",
+          "delta": 5,
+          "reason": "Claude remonte si le web devient la base de travail acceptée."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": 5,
+          "reason": "ChatGPT remonte si le web devient la base de travail acceptée."
+        },
+        {
+          "toolId": "gemini",
+          "delta": 5,
+          "reason": "Gemini remonte si le web devient la base de travail acceptée."
+        },
+        {
+          "toolId": "copilot",
+          "delta": 5,
+          "reason": "Copilot remonte si le web devient la base de travail acceptée."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": 5,
+          "reason": "Perplexity remonte si vous assumez un moteur de réponse principalement web."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": 5,
+          "reason": "AI2 OpenScholar remonte si vous acceptez une logique plus web et généraliste."
+        },
+        {
+          "toolId": "elicit",
+          "delta": -2,
+          "reason": "Elicit devient moins central si vous privilégiez le web plutôt que les bases bibliographiques."
+        },
+        {
+          "toolId": "scispace",
+          "delta": -2,
+          "reason": "SciSpace perd un peu de pertinence si vous ne voulez pas partir d'un vrai corpus bibliographique."
+        },
+        {
+          "toolId": "consensus",
+          "delta": -2,
+          "reason": "Consensus.app vaut surtout pour la littérature, pas pour un usage web large."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -2,
+          "reason": "EvidenceHunt devient moins central si vous ne voulez pas d'abord PubMed."
+        },
+        {
+          "toolId": "undermind",
+          "delta": -2,
+          "reason": "Undermind est pensé pour un vrai corpus bibliographique, pas pour le web généraliste."
+        },
+        {
+          "toolId": "asta",
+          "delta": -2,
+          "reason": "Asta est moins pertinent si vous privilégiez le web plutôt qu'un corpus scientifique."
+        },
+        {
+          "toolId": "platform",
+          "delta": -2,
+          "reason": "Platform est lui aussi plus fort dans un cadre bibliographique que web."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -2,
+          "reason": "Keenious perd du terrain si vous n'êtes plus dans une logique OpenAlex et bibliographie."
+        },
+        {
+          "toolId": "liner",
+          "delta": -2,
+          "reason": "Liner reste plus bibliographique que franchement web."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -2,
+          "reason": "JSTOR AI vaut plutôt pour son corpus et son plein texte que pour le web général."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -2,
+          "reason": "Scifinder AI vaut surtout via son corpus spécialisé, pas via le web."
+        }
+      ]
+    },
+    {
+      "questionId": "interaction_level",
+      "optionId": "high_interaction",
+      "effects": [
+        {
+          "toolId": "claude",
+          "delta": 4,
+          "reason": "Ces généralistes offrent des interactions plaisantes en langage naturel."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": 4,
+          "reason": "Ces généralistes offrent des interactions plaisantes en langage naturel."
+        },
+        {
+          "toolId": "gemini",
+          "delta": 4,
+          "reason": "Ces généralistes offrent des interactions plaisantes en langage naturel."
+        },
+        {
+          "toolId": "copilot",
+          "delta": 4,
+          "reason": "Ces généralistes offrent des interactions plaisantes en langage naturel."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": 4,
+          "reason": "Ces généralistes offrent des interactions plaisantes en langage naturel."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": 4,
+          "reason": "AI2 OpenScholar remonte si l'interaction conversationnelle devient le critère principal."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 4,
+          "reason": "Elicit fait partie des outils spécialisés avec de vraies interactions."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 4,
+          "reason": "SciSpace garde de la valeur si vous voulez un vrai dialogue avec l'outil."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 4,
+          "reason": "Consensus.app reste conversationnel dans son usage."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 3,
+          "reason": "Scifinder AI fait partie des outils avec interactions."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -1,
+          "reason": "EvidenceHunt est plutôt sobre et peu interactif."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": -1,
+          "reason": "Google Scholar Labs n'est pas le meilleur choix si le dialogue prime."
+        },
+        {
+          "toolId": "asta",
+          "delta": -1,
+          "reason": "Asta reste plutôt discret dans ses interactions."
+        },
+        {
+          "toolId": "platform",
+          "delta": -1,
+          "reason": "Platform ne se distingue pas d'abord par une conversation riche."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -1,
+          "reason": "Keenious est plus sobre que conversationnel."
+        },
+        {
+          "toolId": "liner",
+          "delta": -1,
+          "reason": "Liner n'est pas le plus conversationnel du lot."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -1,
+          "reason": "JSTOR AI n'est pas le bon choix si le dialogue avec l'outil est central."
+        }
+      ]
+    },
+    {
+      "questionId": "interaction_level",
+      "optionId": "guided_start",
+      "effects": [
+        {
+          "toolId": "undermind",
+          "delta": 6,
+          "reason": "Undermind interagit surtout au début du processus."
+        },
+        {
+          "toolId": "asta",
+          "delta": 2,
+          "reason": "Asta garde de la valeur si vous voulez davantage un cadre de travail qu'un chatbot permanent."
+        },
+        {
+          "toolId": "platform",
+          "delta": 2,
+          "reason": "Platform peut bien convenir si vous voulez un guidage structurel plutôt qu'une conversation continue."
+        },
+        {
+          "toolId": "liner",
+          "delta": 2,
+          "reason": "Liner reste utile si vous privilégiez un flux guidé mais pas envahissant."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 1,
+          "reason": "Elicit peut encore fonctionner si vous voulez un guidage modéré."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 1,
+          "reason": "SciSpace peut rester acceptable si vous voulez de l'interaction surtout au lancement."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 1,
+          "reason": "Consensus.app peut aussi rester dans un usage d'accompagnement léger."
+        }
+      ]
+    },
+    {
+      "questionId": "interaction_level",
+      "optionId": "low_interaction",
+      "effects": [
+        {
+          "toolId": "evidencehunt",
+          "delta": 4,
+          "reason": "EvidenceHunt remonte si vous voulez surtout des résultats et peu d'échange avec l'outil."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 4,
+          "reason": "Google Scholar Labs colle bien à un flux sobre et peu interactif."
+        },
+        {
+          "toolId": "asta",
+          "delta": 4,
+          "reason": "Asta reste crédible si vous préférez un moteur discret et explicite."
+        },
+        {
+          "toolId": "platform",
+          "delta": 4,
+          "reason": "Platform fonctionne bien dans un usage sobre, centré résultats et processus."
+        },
+        {
+          "toolId": "keenious",
+          "delta": 4,
+          "reason": "Keenious convient mieux si vous ne cherchez pas une conversation riche."
+        },
+        {
+          "toolId": "liner",
+          "delta": 4,
+          "reason": "Liner remonte si vous voulez un flux davantage orienté résultats que dialogue."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": 4,
+          "reason": "JSTOR AI reste cohérent dans un usage très sobre."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 2,
+          "reason": "Scifinder AI peut aussi convenir si le dialogue n'est pas important."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 1,
+          "reason": "Undermind garde de la valeur si vous acceptez surtout un guidage initial puis peu d'interactions."
+        },
+        {
+          "toolId": "claude",
+          "delta": -2,
+          "reason": "Les généralistes perdent en pertinence si le dialogue n'est pas une priorité."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": -2,
+          "reason": "Les généralistes perdent en pertinence si le dialogue n'est pas une priorité."
+        },
+        {
+          "toolId": "gemini",
+          "delta": -2,
+          "reason": "Les généralistes perdent en pertinence si le dialogue n'est pas une priorité."
+        },
+        {
+          "toolId": "copilot",
+          "delta": -2,
+          "reason": "Les généralistes perdent en pertinence si le dialogue n'est pas une priorité."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": -2,
+          "reason": "Les généralistes perdent en pertinence si le dialogue n'est pas une priorité."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": -2,
+          "reason": "AI2 OpenScholar perd en pertinence si le dialogue n'est pas une priorité."
+        }
+      ]
+    },
+    {
+      "questionId": "quality_priority",
+      "optionId": "strict_quality",
+      "effects": [
+        {
+          "toolId": "undermind",
+          "delta": 6,
+          "reason": "Undermind monte si vous voulez limiter le bruit et les revues douteuses."
+        },
+        {
+          "toolId": "liner",
+          "delta": 6,
+          "reason": "Liner gagne quand la priorité est une hygiène documentaire un peu meilleure."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": 5,
+          "reason": "JSTOR AI remonte car aucune inclusion de revues douteuses n'y est signalée."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 5,
+          "reason": "Scifinder AI remonte aussi quand l'exigence de qualité documentaire est forte."
+        },
+        {
+          "toolId": "claude",
+          "delta": -6,
+          "reason": "Les généralistes tombent si vous privilégiez la rigueur documentaire au confort."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": -6,
+          "reason": "Les généralistes tombent si vous privilégiez la rigueur documentaire au confort."
+        },
+        {
+          "toolId": "gemini",
+          "delta": -6,
+          "reason": "Les généralistes tombent si vous privilégiez la rigueur documentaire au confort."
+        },
+        {
+          "toolId": "copilot",
+          "delta": -6,
+          "reason": "Les généralistes tombent si vous privilégiez la rigueur documentaire au confort."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": -6,
+          "reason": "Les généralistes tombent si vous privilégiez la rigueur documentaire au confort."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": -6,
+          "reason": "AI2 OpenScholar tombe si la rigueur documentaire prime."
+        },
+        {
+          "toolId": "elicit",
+          "delta": -3,
+          "reason": "Elicit reste utile, mais inclut des revues douteuses."
+        },
+        {
+          "toolId": "scispace",
+          "delta": -3,
+          "reason": "SciSpace perd un peu de terrain si vous voulez limiter au maximum les sources douteuses."
+        },
+        {
+          "toolId": "consensus",
+          "delta": -4,
+          "reason": "Consensus.app recule à cause des revues douteuses et d'un indicateur de consensus jugé trompeur."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": -5,
+          "reason": "EvidenceHunt est fortement pénalisé à cause des revues douteuses et des articles rétractés."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": -3,
+          "reason": "Google Scholar Labs recule car il inclut aussi des revues douteuses."
+        },
+        {
+          "toolId": "asta",
+          "delta": -5,
+          "reason": "Asta recule si vous voulez éviter à la fois revues douteuses et rétractations."
+        },
+        {
+          "toolId": "platform",
+          "delta": -3,
+          "reason": "Platform recule car il inclut des revues douteuses."
+        },
+        {
+          "toolId": "keenious",
+          "delta": -3,
+          "reason": "Keenious perd du terrain si vous voulez maximiser la prudence documentaire."
+        }
+      ]
+    },
+    {
+      "questionId": "quality_priority",
+      "optionId": "manual_checks_ok",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 3,
+          "reason": "Elicit remonte si vous acceptez de compenser manuellement ses limites documentaires."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 3,
+          "reason": "SciSpace remonte si vous acceptez de vérifier ensuite la qualité du corpus."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 3,
+          "reason": "Consensus.app remonte si vous assumez de garder un regard critique sur ses résultats."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 3,
+          "reason": "Google Scholar Labs remonte si vous acceptez de nettoyer manuellement le corpus."
+        },
+        {
+          "toolId": "platform",
+          "delta": 3,
+          "reason": "Platform gagne quand vous êtes prêt à faire une vérification humaine ensuite."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": 2,
+          "reason": "EvidenceHunt devient plus acceptable si vous surveillez vous-même rétractations et qualité des revues."
+        },
+        {
+          "toolId": "asta",
+          "delta": 2,
+          "reason": "Asta remonte si vous acceptez de compenser ses limites documentaires manuellement."
+        },
+        {
+          "toolId": "keenious",
+          "delta": 2,
+          "reason": "Keenious peut servir si vous acceptez de vérifier ensuite et de l'utiliser modestement."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 1,
+          "reason": "Undermind reste bon même si vous pouvez vérifier vous-même ensuite."
+        },
+        {
+          "toolId": "liner",
+          "delta": 1,
+          "reason": "Liner reste cohérent dans un flux avec vérification humaine."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": 1,
+          "reason": "JSTOR AI peut bien s'intégrer à un flux où vous vérifiez ensuite vous-même."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": 1,
+          "reason": "Scifinder AI reste solide même dans un flux avec vérification humaine."
+        }
+      ]
+    },
+    {
+      "questionId": "quality_priority",
+      "optionId": "comfort_over_rigor",
+      "effects": [
+        {
+          "toolId": "claude",
+          "delta": 5,
+          "reason": "Claude remonte si le confort conversationnel prime sur la meilleure hygiène documentaire."
+        },
+        {
+          "toolId": "chatgpt",
+          "delta": 5,
+          "reason": "ChatGPT remonte si le confort conversationnel prime sur la meilleure hygiène documentaire."
+        },
+        {
+          "toolId": "gemini",
+          "delta": 5,
+          "reason": "Gemini remonte si le confort conversationnel prime sur la meilleure hygiène documentaire."
+        },
+        {
+          "toolId": "copilot",
+          "delta": 5,
+          "reason": "Copilot remonte si le confort conversationnel prime sur la meilleure hygiène documentaire."
+        },
+        {
+          "toolId": "perplexity",
+          "delta": 5,
+          "reason": "Perplexity remonte si vous assumez un arbitrage plus favorable au confort qu'à la rigueur."
+        },
+        {
+          "toolId": "ai2_openscholar",
+          "delta": 5,
+          "reason": "AI2 OpenScholar remonte si le confort et la fluidité passent avant la meilleure hygiène documentaire."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 2,
+          "reason": "SciSpace peut aussi plaire si vous privilégiez une interface riche et pratique."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 2,
+          "reason": "Consensus.app remonte un peu si vous acceptez un compromis plus pratique que rigoureux."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 1,
+          "reason": "Elicit peut encore bénéficier d'un arbitrage plus favorable au confort."
+        },
+        {
+          "toolId": "undermind",
+          "delta": -2,
+          "reason": "Undermind perd un peu si vous vous souciez moins de la rigueur méthodologique."
+        },
+        {
+          "toolId": "liner",
+          "delta": -2,
+          "reason": "Liner perd un peu si la qualité documentaire ne compte plus autant."
+        },
+        {
+          "toolId": "jstor_ai",
+          "delta": -2,
+          "reason": "JSTOR AI perd un peu si l'exigence de vérification documentaire devient secondaire."
+        },
+        {
+          "toolId": "scifinder_ai",
+          "delta": -2,
+          "reason": "Scifinder AI perd du terrain si le confort conversationnel passe avant le corpus spécialisé."
+        }
+      ]
+    },
+    {
+      "questionId": "special_strength",
+      "optionId": "study_extraction",
+      "effects": [
+        {
+          "toolId": "elicit",
+          "delta": 6,
+          "reason": "Elicit se distingue par l'extraction d'informations dans les études."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 6,
+          "reason": "SciSpace se distingue par l'extraction d'informations dans les études."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 1,
+          "reason": "Consensus.app peut encore aider, mais ce n'est pas sa force la plus marquée."
+        }
+      ]
+    },
+    {
+      "questionId": "special_strength",
+      "optionId": "advanced_filters",
+      "effects": [
+        {
+          "toolId": "evidencehunt",
+          "delta": 6,
+          "reason": "EvidenceHunt devient très fort si les filtres avancés sont votre critère principal."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 4,
+          "reason": "Elicit remonte grâce à ses filtres et tris."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 4,
+          "reason": "SciSpace remonte grâce à ses filtres et tris."
+        },
+        {
+          "toolId": "consensus",
+          "delta": 4,
+          "reason": "Consensus.app garde de la valeur si le besoin principal est de filtrer et trier vite."
+        },
+        {
+          "toolId": "google_scholar_labs",
+          "delta": 1,
+          "reason": "Google Scholar Labs peut encore aider, mais sa force principale reste le plein texte plus que les filtres."
+        }
+      ]
+    },
+    {
+      "questionId": "special_strength",
+      "optionId": "process_and_alerts",
+      "effects": [
+        {
+          "toolId": "undermind",
+          "delta": 6,
+          "reason": "Undermind est le signal le plus net si vous voulez un processus détaillé et des alertes."
+        },
+        {
+          "toolId": "platform",
+          "delta": 5,
+          "reason": "Platform monte si la lisibilité du processus compte vraiment."
+        },
+        {
+          "toolId": "liner",
+          "delta": 5,
+          "reason": "Liner monte aussi si vous voulez un processus détaillé."
+        },
+        {
+          "toolId": "asta",
+          "delta": 2,
+          "reason": "Asta peut encore aider grâce à son rapport explicite et ses limites bien formulées."
+        }
+      ]
+    },
+    {
+      "questionId": "special_strength",
+      "optionId": "large_recall",
+      "effects": [
+        {
+          "toolId": "jstor_ai",
+          "delta": 6,
+          "reason": "JSTOR AI devient très fort si le volume de résultats potentiels est prioritaire."
+        },
+        {
+          "toolId": "evidencehunt",
+          "delta": 5,
+          "reason": "EvidenceHunt remonte fort si vous voulez beaucoup d'études repérées rapidement."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 4,
+          "reason": "Undermind garde un bon niveau de rappel avec 70+ études repérées."
+        },
+        {
+          "toolId": "asta",
+          "delta": 3,
+          "reason": "Asta reste intéressant si vous voulez aussi un volume de résultats assez large."
+        },
+        {
+          "toolId": "elicit",
+          "delta": 2,
+          "reason": "Elicit peut encore bien couvrir un besoin de rappel large."
+        },
+        {
+          "toolId": "scispace",
+          "delta": 2,
+          "reason": "SciSpace peut aussi soutenir une logique de rappel assez large."
+        }
+      ]
+    },
+    {
+      "questionId": "special_strength",
+      "optionId": "topic_extraction",
+      "effects": [
+        {
+          "toolId": "keenious",
+          "delta": 7,
+          "reason": "Keenious se distingue surtout par l'extraction de sujets."
+        }
+      ]
+    },
+    {
+      "questionId": "special_strength",
+      "optionId": "explicit_limits",
+      "effects": [
+        {
+          "toolId": "asta",
+          "delta": 7,
+          "reason": "Asta explicite quand il ne trouve rien ou ne retrace pas une information."
+        },
+        {
+          "toolId": "undermind",
+          "delta": 2,
+          "reason": "Undermind reste aussi attractif si vous privilégiez un processus explicite et lisible."
+        }
+      ]
+    }
+  ]
+}
