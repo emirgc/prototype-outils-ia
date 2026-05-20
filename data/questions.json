@@ -1,180 +1,87 @@
 [
   {
-    "id": "research_stage",
-    "title": "Où en êtes-vous dans la recherche ?",
-    "description": "Deux usages structurent surtout les recommandations : explorer un sujet peu maîtrisé et compléter une recherche déjà avancée.",
-    "options": [
-      {
-        "id": "explore_unknown",
-        "label": "Explorer un sujet nouveau",
-        "description": "Je maîtrise encore peu le sujet et je veux ouvrir le terrain."
-      },
-      {
-        "id": "complement_existing",
-        "label": "Compléter une recherche",
-        "description": "J'ai déjà commencé et je veux enrichir ou vérifier mon corpus."
-      },
-      {
-        "id": "both_stages",
-        "label": "Les deux",
-        "description": "Je veux un outil assez souple pour explorer puis compléter."
-      }
-    ]
-  },
-  {
     "id": "discipline_focus",
-    "title": "Quel type de corpus colle le mieux à votre domaine ?",
-    "description": "Les recommandations varient selon le corpus interrogé : multidisciplinaire, PubMed, JSTOR ou base très spécialisée.",
+    "title": "Vous recherchez des documents dans quel domaine disciplinaire ?",
+    "description": "Le corpus interrogé par chaque outil varie selon la discipline. Choisissez le profil le plus proche de votre terrain.",
     "options": [
       {
         "id": "multidisciplinary",
         "label": "Multidisciplinaire",
-        "description": "Sujet transversal, SHS, sciences ou recherche générale."
+        "description": "Sujet transversal ou recherche générale qui traverse plusieurs disciplines."
       },
       {
-        "id": "biomed_health",
-        "label": "Santé / biomédical",
-        "description": "Je travaille surtout avec une logique proche de PubMed."
+        "id": "health_life_sciences",
+        "label": "Sciences de la santé et de la vie",
+        "description": "Médecine, sciences infirmières, biologie, santé publique, sciences de la vie, etc."
       },
       {
-        "id": "humanities_jstor",
-        "label": "SHS / JSTOR",
-        "description": "Le texte intégral type JSTOR me paraît particulièrement utile."
+        "id": "social_humanities",
+        "label": "Sciences sociales et humaines",
+        "description": "Sociologie, histoire, philosophie, littérature, sciences politiques, etc."
       },
       {
         "id": "chemistry",
-        "label": "Chimie / corpus très spécialisé",
-        "description": "J'ai besoin d'un corpus disciplinaire plus niche qu'un moteur généraliste."
+        "label": "Chimie",
+        "description": "Chimie organique, inorganique, analytique ou corpus très spécialisé"
+      },
+      {
+        "id": "law",
+        "label": "Droit",
+        "description": "Sciences juridiques, jurisprudence, doctrine"
+      },
+      {
+        "id": "other",
+        "label": "Autres",
+        "description": "Tout domaine non couvert par les catégories précédentes (informatique, éducation, arts, etc.)."
       }
     ]
   },
   {
-    "id": "desired_output",
-    "title": "Quelle sortie vous rend le plus service ?",
-    "description": "Les outils se distinguent surtout par leur sortie principale : liste de documents, rapport de synthèse ou texte généré.",
+    "id": "desired_use",
+    "title": "Quelle utilisation voulez-vous faire ?",
+    "description": "Les outils se distinguent d'abord par ce qu'ils produisent : une liste de documents, une synthèse scientifique ou une réponse générée à partir du web.",
     "options": [
       {
-        "id": "document_list",
-        "label": "Une liste de documents",
-        "description": "Je veux surtout repérer des documents pertinents."
+        "id": "find_documents",
+        "label": "Repérer des documents scientifiques",
+        "description": "Je veux surtout obtenir une liste de références pertinentes à partir d'un corpus bibliographique."
       },
       {
-        "id": "synthesis_report",
-        "label": "Un rapport de synthèse",
-        "description": "Je veux qu'un rapport m'aide à dégrossir le sujet."
+        "id": "generate_synthesis_corpus",
+        "label": "Générer une synthèse à partir d'un corpus de documents scientifiques",
+        "description": "Je veux qu'un outil parcoure un corpus scientifique et me produise un rapport de synthèse."
       },
       {
-        "id": "both_outputs",
-        "label": "Liste + rapport",
-        "description": "J'ai besoin à la fois de documents et d'une synthèse exploitable."
-      },
-      {
-        "id": "generated_text",
-        "label": "Du texte rédigé automatiquement",
-        "description": "Le confort de rédaction prime sur la rigueur bibliographique."
+        "id": "web_search_synthesis",
+        "label": "Chercher de l'information et générer une synthèse à travers le Web",
+        "description": "Je veux chercher de l'information sur le web et obtenir une réponse ou un texte synthétisé."
       }
     ]
   },
   {
-    "id": "retrieval_basis",
-    "title": "Où l'outil doit-il chercher en priorité ?",
-    "description": "Selon les outils, la recherche s’appuie surtout sur les métadonnées, le texte intégral ou le web.",
+    "id": "upload_intent",
+    "title": "Est-ce que vous avez l'intention de téléverser des contenus dans l'outil ?",
+    "description": "Certains outils acceptent des fichiers en entrée. La nature des documents que vous comptez téléverser a des implications sur le plan des droits.",
     "options": [
       {
-        "id": "metadata_only",
-        "label": "Titres, résumés, mots-clés",
-        "description": "Une recherche sur métadonnées me suffit pour commencer."
+        "id": "library_license",
+        "label": "Oui, documents sous licence des bibliothèques",
+        "description": "J'ai l'intention d'utiliser des documents auxquels j'accède via la licence institutionnelle des bibliothèques."
       },
       {
-        "id": "full_text",
-        "label": "Dans le texte intégral",
-        "description": "Je veux aller au-delà des résumés et entrer dans le contenu intégral."
+        "id": "public_domain",
+        "label": "Oui, documents du domaine public ou libres de droits",
+        "description": "J'ai l'intention de téléverser uniquement des documents en libre accès, du domaine public ou sous licence ouverte."
       },
       {
-        "id": "web_rag",
-        "label": "Sur le web",
-        "description": "Le web me suffit, même si ce n'est pas le flux le plus rigoureux."
-      }
-    ]
-  },
-  {
-    "id": "interaction_level",
-    "title": "Quel niveau d'interaction attendez-vous ?",
-    "description": "Certains outils favorisent un vrai dialogue, d’autres un guidage léger ou un flux plus sobre.",
-    "options": [
-      {
-        "id": "high_interaction",
-        "label": "Un vrai dialogue",
-        "description": "Je veux discuter avec l'outil, reformuler et rebondir."
+        "id": "unknown_nature",
+        "label": "Oui, mais je ne connais pas la nature des documents",
+        "description": "Je veux téléverser des documents, mais je ne suis pas certain de leur statut de droits."
       },
       {
-        "id": "guided_start",
-        "label": "Un guidage surtout au début",
-        "description": "Je veux un peu d'aide au lancement, pas un chatbot permanent."
-      },
-      {
-        "id": "low_interaction",
-        "label": "Peu d'interaction",
-        "description": "Je préfère surtout des résultats, des filtres et un flux plus sobre."
-      }
-    ]
-  },
-  {
-    "id": "quality_priority",
-    "title": "Quelle vigilance documentaire voulez-vous imposer ?",
-    "description": "Les recommandations tiennent compte des revues douteuses, des rétractations et du bruit dans les résultats.",
-    "options": [
-      {
-        "id": "strict_quality",
-        "label": "Limiter au maximum le bruit",
-        "description": "Je veux éviter autant que possible les revues douteuses, les rétractations et les résultats fragiles."
-      },
-      {
-        "id": "manual_checks_ok",
-        "label": "Je peux vérifier manuellement",
-        "description": "Je tolère un corpus imparfait si l'outil m'aide à aller plus vite."
-      },
-      {
-        "id": "comfort_over_rigor",
-        "label": "Le confort prime",
-        "description": "Le côté pratique et conversationnel est plus important pour moi que la meilleure hygiène documentaire."
-      }
-    ]
-  },
-  {
-    "id": "special_strength",
-    "title": "Quel avantage doit peser le plus ?",
-    "description": "Choisissez ici l’avantage fonctionnel qui doit peser le plus dans la recommandation.",
-    "options": [
-      {
-        "id": "study_extraction",
-        "label": "Extraire l'info des études",
-        "description": "Je veux récupérer rapidement des informations comparées entre plusieurs études."
-      },
-      {
-        "id": "advanced_filters",
-        "label": "Filtrer finement",
-        "description": "Je veux des filtres et des tris qui m'aident à nettoyer les résultats."
-      },
-      {
-        "id": "process_and_alerts",
-        "label": "Voir un processus détaillé",
-        "description": "Je veux comprendre comment l'outil travaille et, si possible, suivre des sujets dans le temps."
-      },
-      {
-        "id": "large_recall",
-        "label": "Ratisser très large",
-        "description": "Le nombre de résultats potentiels compte beaucoup pour moi."
-      },
-      {
-        "id": "topic_extraction",
-        "label": "Faire émerger des sujets",
-        "description": "Je veux surtout voir apparaître des pistes ou des thèmes connexes."
-      },
-      {
-        "id": "explicit_limits",
-        "label": "Dire quand il ne sait pas",
-        "description": "Je privilégie un outil qui explicite ce qu'il ne trouve pas ou ne retrace pas."
+        "id": "no_upload",
+        "label": "Non, je cherche seulement des documents ou une synthèse",
+        "description": "Je ne prévois pas de téléverser de fichiers : je veux surtout rechercher ou obtenir une synthèse générée."
       }
     ]
   }

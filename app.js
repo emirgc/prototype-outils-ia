@@ -7,11 +7,11 @@ const state = {
   rankings: [],
   scoreLookup: new Map(),
   previousRanks: new Map(),
-  previousScores: new Map(),
 };
 
 const elements = {
   questionnaireStatus: document.querySelector("#questionnaire-status"),
+  questionnaireProgress: document.querySelector("#questionnaire-progress"),
   progressFill: document.querySelector("#progress-fill"),
   steps: document.querySelector("#steps"),
   answerSummary: document.querySelector("#answer-summary"),
@@ -26,6 +26,17 @@ const elements = {
 const cardRegistry = new Map();
 
 document.addEventListener("DOMContentLoaded", init);
+
+const EXTERNAL_LINK_ICON = `
+  <svg class="external-link-icon" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16">
+    <path d="M14 4h6v6" />
+    <path d="M10 14 20 4" />
+    <path d="M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5" />
+  </svg>
+`;
+
+const UDEM_AI_GUIDE_LICENSE_URL =
+  "https://boite-outils.bib.umontreal.ca/trouver-evaluer/iag?p=5425689";
 
 async function init() {
   bindEvents();
@@ -83,7 +94,6 @@ function bindEvents() {
     state.answers = {};
     state.currentQuestionIndex = 0;
     state.previousRanks = new Map();
-    state.previousScores = new Map();
     computeRankings();
     renderAll();
     focusCurrentQuestionHeading();
@@ -109,6 +119,21 @@ function bindEvents() {
     const questionId = optionButton.dataset.questionId;
     const optionId = optionButton.dataset.optionId;
     handleAnswer(questionId, optionId);
+  });
+
+  elements.questionnaire.addEventListener("keydown", (event) => {
+    const optionButton = event.target.closest("[data-option-id]");
+    if (!optionButton) {
+      return;
+    }
+
+    const navigationKeys = ["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp", "Home", "End"];
+    if (!navigationKeys.includes(event.key)) {
+      return;
+    }
+
+    event.preventDefault();
+    focusSiblingOption(optionButton, event.key);
   });
 }
 
@@ -213,14 +238,10 @@ function computeRankings() {
     ...entry,
     rank: index + 1,
     previousRank: state.previousRanks.get(entry.tool.id) || index + 1,
-    previousScore: state.previousScores.get(entry.tool.id) || 0,
   }));
 
   state.previousRanks = new Map(
     state.rankings.map((entry) => [entry.tool.id, entry.rank])
-  );
-  state.previousScores = new Map(
-    state.rankings.map((entry) => [entry.tool.id, entry.score])
   );
 }
 
@@ -242,6 +263,13 @@ function renderMetrics() {
 
   const progress = totalQuestions === 0 ? 0 : (answeredCount / totalQuestions) * 100;
   elements.progressFill.style.width = `${progress}%`;
+  elements.questionnaireProgress.setAttribute("aria-valuenow", String(Math.round(progress)));
+  elements.questionnaireProgress.setAttribute(
+    "aria-valuetext",
+    `${answeredCount} question${answeredCount > 1 ? "s" : ""} sur ${totalQuestions} répondue${
+      answeredCount > 1 ? "s" : ""
+    }`
+  );
 }
 
 function renderQuestionnaire() {
@@ -256,9 +284,12 @@ function renderQuestionnaire() {
 
   const selectedOptionId = state.answers[question.id];
   const selectedOption = question.options.find((option) => option.id === selectedOptionId);
+  const questionTitleId = `question-${question.id}-title`;
+  const questionDescriptionId = `question-${question.id}-description`;
   const optionsMarkup = question.options
-    .map((option) => {
+    .map((option, optionIndex) => {
       const isSelected = option.id === selectedOptionId;
+      const isTabbable = selectedOptionId ? isSelected : optionIndex === 0;
       const optionDescriptionId = `option-${question.id}-${option.id}-description`;
       return `
         <button
@@ -266,9 +297,11 @@ function renderQuestionnaire() {
           type="button"
           data-question-id="${question.id}"
           data-option-id="${option.id}"
-          data-option-index="${question.options.findIndex((item) => item.id === option.id)}"
-          aria-pressed="${isSelected ? "true" : "false"}"
+          data-option-index="${optionIndex}"
+          role="radio"
+          aria-checked="${isSelected ? "true" : "false"}"
           aria-describedby="${optionDescriptionId}"
+          tabindex="${isTabbable ? "0" : "-1"}"
         >
           <p class="option-label">${option.label}</p>
           <p class="option-description" id="${optionDescriptionId}">${option.description}</p>
@@ -282,8 +315,8 @@ function renderQuestionnaire() {
       <div class="question-header">
         <div>
           <p class="question-kicker">Question</p>
-          <h3 tabindex="-1">${question.title}</h3>
-          <p>${question.description}</p>
+          <h3 id="${questionTitleId}" tabindex="-1">${question.title}</h3>
+          <p id="${questionDescriptionId}">${question.description}</p>
         </div>
         <div class="question-counter">
           ${state.currentQuestionIndex + 1}/${state.questions.length}
@@ -300,7 +333,12 @@ function renderQuestionnaire() {
         }</strong>
       </div>
     </div>
-    <div class="options-grid" role="group" aria-label="Choix de réponse">
+    <div
+      class="options-grid"
+      role="radiogroup"
+      aria-labelledby="${questionTitleId}"
+      aria-describedby="${questionDescriptionId}"
+    >
       ${optionsMarkup}
     </div>
   `;
@@ -392,6 +430,7 @@ function renderSpotlight() {
   }
 
   const top = state.rankings[0];
+  const institutionalBadge = renderInstitutionalBadge(top.tool);
   const reasons = top.positiveReasons.length
     ? top.positiveReasons.slice(0, 2)
     : [
@@ -423,24 +462,23 @@ function renderSpotlight() {
         <h3 class="spotlight-name">${top.tool.name}</h3>
         <p class="spotlight-text">${top.tool.bestFor}</p>
       </div>
-      <div class="spotlight-score">
-        <span class="spotlight-label">Score</span>
-        <strong>${formatScore(top.score)}</strong>
-      </div>
+      ${institutionalBadge ? `<div class="spotlight-meta">${institutionalBadge}</div>` : ""}
     </div>
     <div class="spotlight-facts">
       ${spotlightFacts}
     </div>
     <div class="spotlight-section">
       <p class="spotlight-subtitle">Pourquoi cet outil remonte</p>
-      <ol class="spotlight-reasons">
+      <ul class="spotlight-reasons">
         ${reasons
           .map((item) => `<li>${item.reason}</li>`)
           .join("")}
-      </ol>
+      </ul>
     </div>
     <a class="spotlight-link" href="${top.tool.url}" target="_blank" rel="noreferrer">
-      Ouvrir ${top.tool.name}
+      <span>Ouvrir ${top.tool.name}</span>
+      <span class="sr-only">, ouvre dans un nouvel onglet</span>
+      ${EXTERNAL_LINK_ICON}
     </a>
   `;
 }
@@ -508,9 +546,17 @@ function createCard(toolId) {
 
 function updateCard(card, entry) {
   const movement = entry.previousRank - entry.rank;
-  const scoreClass = entry.score < 0 ? "is-negative" : "";
+  const movementBadge =
+    movement === 0
+      ? ""
+      : `<span class="movement-badge" aria-label="${
+          movement > 0 ? "Cet outil monte dans le classement" : "Cet outil descend dans le classement"
+        }">${movement > 0 ? "↑" : "↓"}</span>`;
   const primaryReason = entry.positiveReasons[0]?.reason || entry.tool.defaultReason;
   const penaltyReason = entry.negativeReasons[0]?.reason || "";
+  const institutionalBadge = renderInstitutionalBadge(entry.tool);
+  const institutionalAccessNote = renderInstitutionalAccessNote(entry.tool);
+  const privacyWarning = renderPrivacyWarning(entry.tool);
   const toolFacts = [
     ["Corpus", entry.tool.corpus],
     ["Recherche", entry.tool.ragScope],
@@ -538,18 +584,14 @@ function updateCard(card, entry) {
   card.innerHTML = `
     <div class="card-top">
       <div>
-        <span class="rank-badge">#${entry.rank}</span>
+        <div class="badge-row">
+          <span class="rank-badge">#${entry.rank}</span>
+        </div>
         <p class="tool-category">${entry.tool.category}</p>
       </div>
       <div>
-        <span class="score-badge ${scoreClass}">${formatScore(entry.score)}</span>
-        ${
-          movement !== 0
-            ? `<span class="movement-badge">${movement > 0 ? "↑" : "↓"} ${Math.abs(
-                movement
-              )}</span>`
-            : ""
-        }
+        ${institutionalBadge}
+        ${movementBadge}
       </div>
     </div>
 
@@ -566,6 +608,8 @@ function updateCard(card, entry) {
 
         <p class="tool-summary">${entry.tool.bestFor}</p>
         ${cardNote}
+        ${institutionalAccessNote}
+        ${privacyWarning}
       </div>
 
       <div class="card-side">
@@ -573,10 +617,61 @@ function updateCard(card, entry) {
           ${toolFacts}
         </dl>
         <a class="tool-link" href="${entry.tool.url}" target="_blank" rel="noreferrer">
-          Ouvrir ${entry.tool.name}
+          <span>Ouvrir ${entry.tool.name}</span>
+          <span class="sr-only">, ouvre dans un nouvel onglet</span>
+          ${EXTERNAL_LINK_ICON}
         </a>
       </div>
     </div>
+  `;
+}
+
+function renderInstitutionalBadge(tool) {
+  if (!tool.institutionalLicense) {
+    return "";
+  }
+
+  const label = tool.licenseLabel || "Licence institutionnelle UdeM";
+  return `
+    <a
+      class="license-badge"
+      href="${UDEM_AI_GUIDE_LICENSE_URL}"
+      target="_blank"
+      rel="noreferrer"
+      title="Consulter le guide des bibliothèques sur les fonctionnalités d'IA incluses dans les licences institutionnelles"
+    >
+      ${label}
+      <span class="sr-only">, ouvre dans un nouvel onglet</span>
+    </a>
+  `;
+}
+
+function renderInstitutionalAccessNote(tool) {
+  if (!tool.institutionalAccessNote) {
+    return "";
+  }
+
+  return `
+    <p class="access-note">
+      ${tool.institutionalAccessNote}
+      <a href="${UDEM_AI_GUIDE_LICENSE_URL}" target="_blank" rel="noreferrer">
+        Voir les consignes d’accès.
+        <span class="sr-only">, ouvre dans un nouvel onglet</span>
+      </a>
+    </p>
+  `;
+}
+
+function renderPrivacyWarning(tool) {
+  if (!tool.privacyWarning) {
+    return "";
+  }
+
+  return `
+    <p class="privacy-warning">
+      <strong>Avertissement :</strong>
+      ${tool.privacyWarning}
+    </p>
   `;
 }
 
@@ -612,6 +707,37 @@ function focusCurrentOption(questionId, optionId) {
   optionButton.focus({ preventScroll: true });
 }
 
+function focusSiblingOption(currentOption, key) {
+  const options = Array.from(
+    elements.questionnaire.querySelectorAll(
+      `[data-question-id="${currentOption.dataset.questionId}"][data-option-id]`
+    )
+  );
+
+  if (options.length === 0) {
+    return;
+  }
+
+  const currentIndex = options.indexOf(currentOption);
+  const lastIndex = options.length - 1;
+  let nextIndex = currentIndex;
+
+  if (key === "Home") {
+    nextIndex = 0;
+  } else if (key === "End") {
+    nextIndex = lastIndex;
+  } else if (key === "ArrowRight" || key === "ArrowDown") {
+    nextIndex = currentIndex === lastIndex ? 0 : currentIndex + 1;
+  } else if (key === "ArrowLeft" || key === "ArrowUp") {
+    nextIndex = currentIndex <= 0 ? lastIndex : currentIndex - 1;
+  }
+
+  options[nextIndex]?.focus({ preventScroll: true });
+  options.forEach((option, index) => {
+    option.tabIndex = index === nextIndex ? 0 : -1;
+  });
+}
+
 function focusRecommendationsHeading() {
   const heading = document.querySelector("#recommendations-title");
   if (!heading) {
@@ -641,14 +767,6 @@ function getOptionLabel(questionId, optionId) {
 function getQuestionTitle(questionId) {
   const question = state.questions.find((item) => item.id === questionId);
   return question ? question.title : questionId;
-}
-
-function formatScore(score) {
-  if (score === 0) {
-    return "0";
-  }
-
-  return score > 0 ? `+${score}` : `${score}`;
 }
 
 function isDuplicateText(left, right) {
