@@ -14,11 +14,7 @@ const elements = {
   questionnaireProgress: document.querySelector("#questionnaire-progress"),
   progressFill: document.querySelector("#progress-fill"),
   steps: document.querySelector("#steps"),
-  answerSummary: document.querySelector("#answer-summary"),
   questionnaire: document.querySelector("#questionnaire"),
-  previousBtn: document.querySelector("#previous-btn"),
-  nextBtn: document.querySelector("#next-btn"),
-  resetBtn: document.querySelector("#reset-btn"),
   topRecommendation: document.querySelector("#top-recommendation"),
   cardsGrid: document.querySelector("#cards-grid"),
 };
@@ -64,41 +60,6 @@ async function init() {
 }
 
 function bindEvents() {
-  elements.previousBtn.addEventListener("click", () => {
-    state.currentQuestionIndex = Math.max(0, state.currentQuestionIndex - 1);
-    renderQuestionnaire();
-    focusCurrentQuestionHeading();
-  });
-
-  elements.nextBtn.addEventListener("click", () => {
-    const isLastQuestion =
-      state.currentQuestionIndex === state.questions.length - 1;
-
-    if (isLastQuestion) {
-      document
-        .querySelector(".recommendations-panel")
-        .scrollIntoView({ behavior: "smooth", block: "start" });
-      focusRecommendationsHeading();
-      return;
-    }
-
-    state.currentQuestionIndex = Math.min(
-      state.questions.length - 1,
-      state.currentQuestionIndex + 1
-    );
-    renderQuestionnaire();
-    focusCurrentQuestionHeading();
-  });
-
-  elements.resetBtn.addEventListener("click", () => {
-    state.answers = {};
-    state.currentQuestionIndex = 0;
-    state.previousRanks = new Map();
-    computeRankings();
-    renderAll();
-    focusCurrentQuestionHeading();
-  });
-
   elements.steps.addEventListener("click", (event) => {
     const button = event.target.closest("[data-step-index]");
     if (!button) {
@@ -274,7 +235,6 @@ function renderMetrics() {
 
 function renderQuestionnaire() {
   renderSteps();
-  renderAnswerSummary();
 
   const question = state.questions[state.currentQuestionIndex];
   if (!question) {
@@ -343,9 +303,6 @@ function renderQuestionnaire() {
     </div>
   `;
 
-  const isLastQuestion = state.currentQuestionIndex === state.questions.length - 1;
-  elements.previousBtn.disabled = state.currentQuestionIndex === 0;
-  elements.nextBtn.textContent = isLastQuestion ? "Voir les résultats" : "Continuer";
 }
 
 function renderSteps() {
@@ -385,33 +342,6 @@ function renderSteps() {
   elements.steps.innerHTML = markup;
 }
 
-function renderAnswerSummary() {
-  const answeredQuestions = state.questions.filter(
-    (question) => state.answers[question.id]
-  );
-
-  if (answeredQuestions.length === 0) {
-    elements.answerSummary.innerHTML = `
-      <p class="helper-text">
-        Commencez par une première réponse. Vos choix s’accumulent ici et le classement se réordonne immédiatement.
-      </p>
-    `;
-    return;
-  }
-
-  elements.answerSummary.innerHTML = answeredQuestions
-    .map((question) => {
-      const option = getSelectedOption(question.id);
-      return `
-        <div class="summary-chip">
-          <small>${question.title}</small>
-          <strong>${option.label}</strong>
-        </div>
-      `;
-    })
-    .join("");
-}
-
 function renderSpotlight() {
   const answeredCount = Object.keys(state.answers).length;
 
@@ -431,6 +361,8 @@ function renderSpotlight() {
 
   const top = state.rankings[0];
   const institutionalBadge = renderInstitutionalBadge(top.tool);
+  const institutionalAccessNote = renderInstitutionalAccessNote(top.tool);
+  const privacyWarning = renderPrivacyWarning(top.tool);
   const reasons = top.positiveReasons.length
     ? top.positiveReasons.slice(0, 2)
     : [
@@ -474,6 +406,10 @@ function renderSpotlight() {
           .map((item) => `<li>${item.reason}</li>`)
           .join("")}
       </ul>
+      <div class="spotlight-notes">
+        ${institutionalAccessNote}
+        ${privacyWarning}
+      </div>
     </div>
     <a class="spotlight-link" href="${top.tool.url}" target="_blank" rel="noreferrer">
       <span>Ouvrir ${top.tool.name}</span>
@@ -491,9 +427,12 @@ function renderCards() {
 
   const fragment = document.createDocumentFragment();
 
+  let displayRank = 0;
   state.rankings.forEach((entry) => {
+    if (entry.previousRank - entry.rank < 0) return;
+    displayRank += 1;
     const card = cardRegistry.get(entry.tool.id) || createCard(entry.tool.id);
-    updateCard(card, entry);
+    updateCard(card, entry, displayRank);
     fragment.appendChild(card);
   });
 
@@ -544,7 +483,7 @@ function createCard(toolId) {
   return card;
 }
 
-function updateCard(card, entry) {
+function updateCard(card, entry, displayRank) {
   const movement = entry.previousRank - entry.rank;
   const movementBadge =
     movement === 0
@@ -579,13 +518,13 @@ function updateCard(card, entry) {
       ? `<p class="reason-inline">${primaryReason}</p>`
       : "";
 
-  card.dataset.rank = String(entry.rank);
+  card.dataset.rank = String(displayRank);
   card.style.setProperty("--tool-accent", entry.tool.accent);
   card.innerHTML = `
     <div class="card-top">
       <div>
         <div class="badge-row">
-          <span class="rank-badge">#${entry.rank}</span>
+          <span class="rank-badge">#${displayRank}</span>
         </div>
         <p class="tool-category">${entry.tool.category}</p>
       </div>
@@ -681,9 +620,6 @@ function renderError(message) {
   elements.topRecommendation.className = "spotlight is-empty";
   elements.topRecommendation.innerHTML = `<p class="helper-text">${message}</p>`;
   elements.cardsGrid.innerHTML = "";
-  elements.previousBtn.disabled = true;
-  elements.nextBtn.disabled = true;
-  elements.resetBtn.disabled = true;
 }
 
 function focusCurrentQuestionHeading() {
@@ -736,15 +672,6 @@ function focusSiblingOption(currentOption, key) {
   options.forEach((option, index) => {
     option.tabIndex = index === nextIndex ? 0 : -1;
   });
-}
-
-function focusRecommendationsHeading() {
-  const heading = document.querySelector("#recommendations-title");
-  if (!heading) {
-    return;
-  }
-
-  heading.focus({ preventScroll: true });
 }
 
 function getSelectedOption(questionId) {

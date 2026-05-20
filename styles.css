@@ -149,9 +149,9 @@ body::before {
 
 .hero {
   display: grid;
-  gap: 18px;
-  padding: 24px 26px;
-  border-radius: 38px;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 26px;
   min-height: 0;
 }
 
@@ -161,15 +161,22 @@ body::before {
 
 .hero-brand {
   display: grid;
-  place-items: center;
-  padding: 6px 0 0;
+  place-items: start;
+  border-right: 1px solid rgba(31, 36, 51, 0.12);
+  padding: 0;
+  padding-right: 16px;
 }
 
 .hero-logo {
   display: block;
-  width: min(100%, 240px);
+  width: min(100%, 156px);
   height: auto;
   object-fit: contain;
+}
+
+.hero-logo-link {
+  display: inline-flex;
+  width: fit-content;
 }
 
 .hero::after,
@@ -208,14 +215,14 @@ body::before {
 }
 
 .hero h1 {
-  margin: 10px 0 12px;
+  margin: 6px 0 8px;
   max-width: 30ch;
-  font-size: clamp(2rem, 4vw, 3.35rem);
-  line-height: 0.98;
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  line-height: 1;
 }
 
 .hero-text {
-  max-width: 52ch;
+  max-width: 72ch;
   margin: 0;
   font-size: 0.96rem;
   line-height: 1.55;
@@ -314,7 +321,7 @@ body::before {
 
 .section-note {
   margin: 0;
-  max-width: 26ch;
+  max-width: 42ch;
   text-align: right;
   font-size: 0.88rem;
   line-height: 1.4;
@@ -330,7 +337,6 @@ body::before {
 
 .questionnaire-shell,
 .questionnaire-main,
-.questionnaire-side,
 .recommendations-shell {
   display: grid;
   gap: 14px;
@@ -398,10 +404,10 @@ body::before {
 
 .step-button {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
-  min-height: 44px;
-  padding: 11px 12px;
+  min-height: 40px;
+  padding: 8px 10px;
   border: 1px solid rgba(31, 36, 51, 0.1);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.54);
@@ -497,7 +503,7 @@ body::before {
 }
 
 .question-stage {
-  padding: 16px;
+  padding: 12px;
   border-radius: 22px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.62)),
@@ -507,8 +513,8 @@ body::before {
 
 .question-stage-top {
   display: grid;
-  gap: 12px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .question-header {
@@ -516,13 +522,13 @@ body::before {
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .question-header h3 {
   margin: 0 0 6px;
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-size: clamp(1.15rem, 1.7vw, 1.55rem);
   line-height: 1;
 }
 
@@ -549,15 +555,15 @@ body::before {
 
 .question-current-answer {
   display: grid;
-  gap: 6px;
-  padding: 12px 14px;
+  gap: 4px;
+  padding: 8px 12px;
   border-radius: 16px;
   border: 1px solid rgba(31, 36, 51, 0.08);
   background: rgba(31, 36, 51, 0.04);
 }
 
 .question-current-answer strong {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   line-height: 1.35;
 }
 
@@ -576,9 +582,9 @@ body::before {
 .option-card {
   display: grid;
   align-content: start;
-  min-height: 118px;
+  min-height: 96px;
   min-width: 0;
-  padding: 14px;
+  padding: 11px;
   border-radius: 18px;
   border: 1px solid rgba(31, 36, 51, 0.1);
   background: rgba(255, 255, 255, 0.85);
@@ -605,14 +611,14 @@ body::before {
 }
 
 .option-label {
-  margin: 0 0 6px;
-  font-size: 0.96rem;
+  margin: 0 0 4px;
+  font-size: 0.88rem;
   font-weight: 700;
 }
 
 .option-description {
   margin: 0;
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   line-height: 1.35;
 }
 
@@ -732,6 +738,16 @@ body::before {
 .spotlight-section {
   display: grid;
   gap: 8px;
+}
+
+.spotlight-notes {
+  display: grid;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.spotlight-notes:empty {
+  display: none;
 }
 
 .spotlight-reasons {
@@ -1069,7 +1085,15 @@ body::before {
 
   .hero,
   .panel {
-    padding: 22px;
+    padding: 18px;
+  }
+
+  .hero-brand {
+    justify-items: start;
+    border-right: 0;
+    border-top: 1px solid rgba(31, 36, 51, 0.12);
+    padding-right: 0;
+    padding-top: 12px;
   }
 
   .section-head,
@@ -1117,12 +1141,12 @@ body::before {
 
   .hero,
   .panel {
-    padding: 18px;
+    padding: 16px;
   }
 
   .hero h1 {
     max-width: none;
-    font-size: clamp(1.8rem, 9vw, 2.5rem);
+    font-size: clamp(1.7rem, 8vw, 2.25rem);
   }
 
   .hero-text {
@@ -1219,9 +1243,9 @@ body::before {
   .hero {
     grid-template-columns: 1fr;
     align-items: start;
-    gap: 14px;
-    padding: 20px 22px;
-    border-radius: 34px;
+    gap: 10px;
+    padding: 16px 18px;
+    border-radius: 26px;
   }
 
   .hero-copy {
@@ -1229,31 +1253,34 @@ body::before {
   }
 
   .hero-brand {
-    justify-self: end;
+    justify-self: start;
     align-self: center;
-    width: min(100%, 320px);
+    width: min(100%, 180px);
+    border-right: 1px solid rgba(31, 36, 51, 0.12);
+    border-top: 0;
     padding-top: 0;
+    padding-right: 16px;
   }
 
   .hero-logo {
-    width: min(100%, 280px);
+    width: min(100%, 156px);
   }
 
   .hero h1 {
     max-width: 21ch;
-    margin-bottom: 10px;
-    font-size: clamp(2.1rem, 3vw, 3.1rem);
+    margin-bottom: 6px;
+    font-size: clamp(1.9rem, 2.5vw, 2.6rem);
   }
 
   .hero-text {
-    max-width: 60ch;
-    font-size: 0.93rem;
+    max-width: 82ch;
+    font-size: 0.9rem;
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 320px);
+    grid-template-columns: minmax(150px, 180px) minmax(0, 1.35fr);
     align-items: center;
-    gap: 20px;
+    gap: 16px;
   }
 
   .layout {
@@ -1276,7 +1303,7 @@ body::before {
   }
 
   .questionnaire-panel .section-note {
-    max-width: 30ch;
+    max-width: 46ch;
     text-align: right;
   }
 
@@ -1310,8 +1337,8 @@ body::before {
   .step-button {
     grid-template-columns: auto minmax(0, 1fr);
     align-items: start;
-    gap: 6px;
-    padding: 10px 11px;
+    gap: 5px;
+    padding: 8px 9px;
   }
 
   .step-title {
@@ -1323,21 +1350,15 @@ body::before {
     font-size: 0.76rem;
   }
 
-  .questionnaire-main {
-    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.75fr);
-    gap: 16px;
-    align-items: start;
-  }
-
   .questionnaire-panel .question-stage {
     min-width: 0;
-    padding: 18px 18px 16px;
+    padding: 14px 14px 12px;
     border-radius: 24px;
   }
 
   .question-stage-top {
-    gap: 14px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
 
   .question-header {
@@ -1350,7 +1371,7 @@ body::before {
 
   .question-header h3 {
     margin-bottom: 4px;
-    font-size: clamp(1.28rem, 1.7vw, 1.72rem);
+    font-size: clamp(1.1rem, 1.4vw, 1.45rem);
   }
 
   .question-header p {
@@ -1370,14 +1391,14 @@ body::before {
   }
 
   .option-card {
-    min-height: 112px;
-    padding: 14px;
+    min-height: 90px;
+    padding: 11px;
     border-radius: 16px;
   }
 
   .option-label {
-    margin-bottom: 4px;
-    font-size: 0.9rem;
+    margin-bottom: 3px;
+    font-size: 0.86rem;
   }
 
   .option-description {
@@ -1389,40 +1410,8 @@ body::before {
     overflow: hidden;
   }
 
-  .questionnaire-side {
-    grid-template-rows: minmax(0, 1fr) auto;
-    gap: 12px;
-  }
-
-  .side-card {
-    padding: 16px;
-    min-height: 100%;
-  }
-
   .summary-chip {
     padding: 7px 10px;
-  }
-
-  .questionnaire-panel .question-actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    margin-top: 0;
-    padding-top: 0;
-  }
-
-  .questionnaire-panel .question-actions .ghost-button {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .questionnaire-panel .question-actions .ghost-button-strong {
-    grid-column: 1 / -1;
-    margin-left: 0;
-  }
-
-  .ghost-button {
-    padding: 9px 12px;
   }
 
   .recommendations-panel .section-head {
@@ -1434,7 +1423,7 @@ body::before {
   }
 
   .recommendations-panel .section-note {
-    max-width: 28ch;
+    max-width: 46ch;
     text-align: right;
   }
 
@@ -1529,10 +1518,6 @@ body::before {
 }
 
 @media (min-width: 1280px) {
-  .questionnaire-main {
-    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
-  }
-
   .spotlight-facts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

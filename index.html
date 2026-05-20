@@ -24,21 +24,23 @@
       <div class="ambient ambient-c" aria-hidden="true"></div>
 
       <header class="hero">
+        <div class="hero-brand">
+          <a class="hero-logo-link" href="https://bib.umontreal.ca/" aria-label="Accueil des bibliothèques UdeM">
+            <img
+              class="hero-logo"
+              src="logobib.svg"
+              alt=""
+              width="156"
+              height="43"
+            />
+          </a>
+        </div>
         <div class="hero-copy">
           <p class="eyebrow">Questionnaire interactif · Les bibliothèques UdeM</p>
           <h1>Radar IA</h1>
           <p class="hero-text">
             Questionnaire sur les outils d’IA génératives spécialisées pour la recherche universitaire.
           </p>
-        </div>
-        <div class="hero-brand">
-          <img
-            class="hero-logo"
-            src="biblio-sceau-RVB.svg"
-            alt="Logo des bibliothèques UdeM"
-            width="320"
-            height="320"
-          />
         </div>
       </header>
 
@@ -74,20 +76,6 @@
             <div class="questionnaire-main">
               <div class="question-stage" id="questionnaire"></div>
 
-              <aside class="questionnaire-side" aria-label="Résumé des réponses">
-                <div class="side-card">
-                  <p class="side-kicker">Réponses retenues</p>
-                  <div class="answer-summary" id="answer-summary" aria-live="polite" aria-atomic="true"></div>
-                </div>
-
-                <div class="question-actions">
-                  <button class="ghost-button" id="previous-btn" type="button">Précédent</button>
-                  <button class="ghost-button" id="next-btn" type="button">Continuer</button>
-                  <button class="ghost-button ghost-button-strong" id="reset-btn" type="button">
-                    Réinitialiser
-                  </button>
-                </div>
-              </aside>
             </div>
           </div>
         </section>
@@ -115,7 +103,7 @@
 
       <footer class="site-footer">
         <p>
-          Site prototypé avec ChatGPT Codex 5.5.
+          Site prototypé avec ChatGPT Codex 5.5 et Claude Code (Sonnet 4.6).
         </p>
         <nav class="footer-links" aria-label="Liens utiles">
           <a href="https://bib.umontreal.ca/" target="_blank" rel="noreferrer">
